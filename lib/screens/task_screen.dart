@@ -57,10 +57,78 @@ class TaskScreen extends StatelessWidget {
                     topLeft: Radius.circular(20.0),
                     topRight: Radius.circular(20.0),
                   )),
+              child: Tasks(),
             ),
           ),
         ],
       ),
+    );
+  }
+}
+
+class Tasks extends StatelessWidget {
+  List<Padding> tasks = [
+    Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Row(
+        children: <Widget>[
+          Expanded(
+              child: Text(
+                'Buy milk',
+                style: TextStyle(
+                  fontSize: 25.0,
+                ),
+              )),
+          Icon(
+            Icons.crop_square,
+            size: 30.0,
+          ),
+        ],
+      ),
+    ),
+    Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Row(
+        children: <Widget>[
+          Expanded(
+              child: Text(
+                'Buy eggs',
+                style: TextStyle(
+                  fontSize: 25.0,
+                ),
+              )),
+          Icon(
+            Icons.crop_square,
+            size: 30.0,
+          ),
+        ],
+      ),
+    ),
+    Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Row(
+        children: <Widget>[
+          Expanded(
+            child: Text(
+              'Buy bread',
+              style: TextStyle(
+                  decoration: TextDecoration.lineThrough, fontSize: 25.0),
+            ),
+          ),
+          Icon(
+            Icons.check_box,
+            size: 30.0,
+          ),
+        ],
+      ),
+    ),
+  ];
+
+  @override
+  Widget build(BuildContext context) {
+    return ListView(
+      padding: EdgeInsets.all(50.0),
+      children: tasks,
     );
   }
 }
