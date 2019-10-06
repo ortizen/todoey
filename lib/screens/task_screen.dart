@@ -74,11 +74,11 @@ class Tasks extends StatelessWidget {
         children: <Widget>[
           Expanded(
               child: Text(
-                'Buy milk',
-                style: TextStyle(
-                  fontSize: 25.0,
-                ),
-              )),
+            'Buy milk',
+            style: TextStyle(
+              fontSize: 25.0,
+            ),
+          )),
           Icon(
             Icons.crop_square,
             size: 30.0,
@@ -92,11 +92,11 @@ class Tasks extends StatelessWidget {
         children: <Widget>[
           Expanded(
               child: Text(
-                'Buy eggs',
-                style: TextStyle(
-                  fontSize: 25.0,
-                ),
-              )),
+            'Buy eggs',
+            style: TextStyle(
+              fontSize: 25.0,
+            ),
+          )),
           Icon(
             Icons.crop_square,
             size: 30.0,
