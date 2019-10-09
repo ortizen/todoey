@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:todoey_app/widgets/tasks_list.dart';
 
 class TaskScreen extends StatelessWidget {
   @override
@@ -51,84 +52,18 @@ class TaskScreen extends StatelessWidget {
           ),
           Expanded(
             child: Container(
+              padding: EdgeInsets.symmetric(horizontal: 20.0),
               decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(20.0),
                     topRight: Radius.circular(20.0),
                   )),
-              child: Tasks(),
+              child: TasksList(),
             ),
           ),
         ],
       ),
-    );
-  }
-}
-
-class Tasks extends StatelessWidget {
-  List<Padding> tasks = [
-    Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: Row(
-        children: <Widget>[
-          Expanded(
-              child: Text(
-            'Buy milk',
-            style: TextStyle(
-              fontSize: 25.0,
-            ),
-          )),
-          Icon(
-            Icons.crop_square,
-            size: 30.0,
-          ),
-        ],
-      ),
-    ),
-    Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: Row(
-        children: <Widget>[
-          Expanded(
-              child: Text(
-            'Buy eggs',
-            style: TextStyle(
-              fontSize: 25.0,
-            ),
-          )),
-          Icon(
-            Icons.crop_square,
-            size: 30.0,
-          ),
-        ],
-      ),
-    ),
-    Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: Row(
-        children: <Widget>[
-          Expanded(
-            child: Text(
-              'Buy bread',
-              style: TextStyle(
-                  decoration: TextDecoration.lineThrough, fontSize: 25.0),
-            ),
-          ),
-          Icon(
-            Icons.check_box,
-            size: 30.0,
-          ),
-        ],
-      ),
-    ),
-  ];
-
-  @override
-  Widget build(BuildContext context) {
-    return ListView(
-      padding: EdgeInsets.all(50.0),
-      children: tasks,
     );
   }
 }
