@@ -64,7 +64,7 @@ class TaskScreen extends StatelessWidget {
                     topLeft: Radius.circular(20.0),
                     topRight: Radius.circular(20.0),
                   )),
-              child: TasksList(),
+              child: TasksList(tasks),
             ),
           ),
         ],

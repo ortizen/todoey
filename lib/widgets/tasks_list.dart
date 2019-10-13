@@ -3,17 +3,18 @@ import 'task_tile.dart';
 import 'package:todoey_app/models/task.dart';
 
 class TasksList extends StatefulWidget {
+  final List<Task> tasks;
+
+  TasksList(this.tasks);
+
   @override
-  _TasksListState createState() => _TasksListState();
+  _TasksListState createState() => _TasksListState(tasks);
 }
 
 class _TasksListState extends State<TasksList> {
-  List<Task> tasks = [
-    Task(name: 'Buy milk'),
-    Task(name: 'Buy eggs'),
-    Task(name: 'Buy bread'),
-  ];
+  List<Task> tasks;
 
+  _TasksListState(this.tasks);
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
